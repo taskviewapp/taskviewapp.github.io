@@ -2,7 +2,7 @@
 
 ### The focused daily planner built for how ADHD brains actually work.
 
-Task View is a local-first iOS and Android productivity app designed specifically for people with ADHD. No cloud sync. No subscriptions to forget about. No cluttered dashboards. Just a clean, simple daily planning tool that gets out of your way and helps you focus on what matters today.
+Task View is an iOS and Android productivity app designed specifically for people with ADHD. No cluttered dashboards. No complex setup. Just a clean, simple daily planning tool that gets out of your way and helps you focus on what matters today.
 
 All your data lives on your device. Task View never transmits anything to any server.
 
@@ -28,11 +28,10 @@ All your data lives on your device. Task View never transmits anything to any se
 
 Most productivity apps are built for people who love systems. Task View is built for people whose brains resist systems. It gives you just enough structure to capture your day, see your week, and not lose track of things — without the cognitive overhead of learning a complex tool.
 
-- **Local-first** — your data never leaves your device
-- **No login required** — open the app and start planning
 - **Auto-saves everything** — nothing to remember, nothing to lose
 - **Past days are locked** — your history is preserved exactly as it was
 - **Built for ADHD** — low friction, high clarity, no clutter
+- **No complex setup** — open the app and start planning immediately
 
 ---
 
@@ -89,7 +88,7 @@ Personalize your greeting, week start day, and date format. Built-in feature req
 
 ## Privacy
 
-Task View stores all data locally on your device. Nothing is transmitted to Task View App LLC servers or any third party. Your tasks, notes, and planning data belong entirely to you.
+Task View is committed to your privacy. Your tasks, notes, and planning data belong entirely to you. See our full Privacy Policy for details.
 
 - [Privacy Policy](https://taskviewapp.github.io/legal/privacy)
 - [Terms and Conditions](https://taskviewapp.github.io/legal/terms)
