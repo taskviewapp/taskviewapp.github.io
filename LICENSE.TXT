@@ -1,0 +1,8 @@
+Copyright (c) 2026 Task View App LLC. All rights reserved.
+
+All content in this repository including text, images, and documentation
+is the proprietary property of Task View App LLC. No permission is granted
+to copy, reproduce, distribute, or create derivative works from any content
+in this repository without explicit written permission from Task View App LLC.
+
+Contact: taskview.app.admin@gmail.com
