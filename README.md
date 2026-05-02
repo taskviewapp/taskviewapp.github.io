@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_logo_cropped.png" width="180" alt="Task View Logo"/>
+</p>
+
 # Task View
 
 ### The focused daily planner built for how ADHD brains actually work.
