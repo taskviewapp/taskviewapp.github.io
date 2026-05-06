@@ -4,7 +4,7 @@
 *Task View App LLC*
 
 **Effective Date:** May 2026
-**Version:** 1.0
+**Version:** 1.1
 
 ---
 
@@ -27,6 +27,18 @@ Task View App LLC does not collect, store, or have access to:
 - Your location
 - Your contacts
 - Your device identifiers beyond what Apple and Google provide to all developers through their platforms
+
+### Regulated and Protected Data
+
+Task View is not designed, audited, or certified for use with regulated or protected data categories. **We do not knowingly process, and you may not use the App to store or manage:**
+
+- Protected health information (PHI) as defined under HIPAA
+- Financial account numbers, payment card information, or banking credentials
+- Social Security numbers or government-issued identification numbers
+- Any data subject to PCI-DSS, GLBA, SOX, FERPA, or similar regulatory frameworks
+- Any other category of data subject to specific legal protection or professional confidentiality obligations
+
+Users are solely responsible for ensuring that any content entered into the App complies with applicable laws and regulations. Task View App LLC expressly disclaims all liability arising from the use of the App with regulated or protected data. For regulatory compliance requirements, please use purpose-built, certified software.
 
 ---
 
@@ -73,7 +85,10 @@ Your subscription is managed through the Apple App Store or Google Play Store. P
 ### 6.2 RevenueCat
 The App uses RevenueCat to manage subscription status and validate purchases. RevenueCat may collect limited technical information to verify subscription status, such as a device identifier and subscription state. RevenueCat does not receive your personal task data. RevenueCat's privacy policy is available at https://www.revenuecat.com/privacy
 
-### 6.3 Apple and Google Platform Services
+### 6.3 Sentry
+The App uses Sentry for crash reporting and error monitoring. If the App crashes or encounters an error, Sentry may collect limited technical information including device type, operating system version, app version, and a stack trace describing the error. Sentry does not receive your personal task data, notes, or any content you enter into the App. Sentry's privacy policy is available at https://sentry.io/privacy/
+
+### 6.4 Apple and Google Platform Services
 As with all apps distributed through the App Store and Google Play, Apple and Google may collect certain technical and usage information through their platforms in accordance with their respective privacy policies.
 
 ---
@@ -89,6 +104,8 @@ The App is not directed to children under the age of 13. We do not knowingly col
 Because your data is stored on your device and in your own cloud accounts, its security is primarily governed by the security of your device and your Apple or Google account. We encourage you to use a strong device passcode and to keep your device's operating system up to date.
 
 Task View App LLC does not maintain servers that store your personal data and therefore cannot be responsible for server-side data breaches involving your task data.
+
+The App stores your data in a locally encrypted database on your device. The encryption key is stored in your device's secure keychain (iOS Keychain on Apple devices, Android Keystore on Android devices) and is never transmitted off your device.
 
 ---
 
