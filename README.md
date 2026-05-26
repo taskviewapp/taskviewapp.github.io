@@ -96,21 +96,21 @@ Personalize your greeting, week start day, and date format. Export all your data
 
 Task View is built on a simple principle: your data belongs to you. Your tasks, notes, and planning history never leave your device. Task View has no server, no account, no sync, and no analytics. There is nothing to breach because there is nothing stored anywhere but your device.
 
-- [Privacy Policy](https://taskviewapp.github.io/legal/privacy)
-- [Terms and Conditions](https://taskviewapp.github.io/legal/terms)
+- [Privacy Policy](https://taskviewapp.com/legal/privacy)
+- [Terms and Conditions](https://taskviewapp.com/legal/terms)
 
 ---
 
 ## Legal
 
-© 2026 Task View App LLC. All rights reserved.  
-Task View App LLC is a Wisconsin limited liability company.  
-Task View is a trademark of Task View App LLC.
+© 2026 Task View LLC. All rights reserved.  
+Task View LLC is a Wisconsin limited liability company.  
+Task View is a trademark of Task View LLC.
 
 ---
 
 <p align="center">
-  <a href="https://taskviewapp.github.io/legal/privacy">Privacy Policy</a> &nbsp;•&nbsp;
-  <a href="https://taskviewapp.github.io/legal/terms">Terms and Conditions</a> &nbsp;•&nbsp;
+  <a href="https://taskviewapp.com/legal/privacy">Privacy Policy</a> &nbsp;•&nbsp;
+  <a href="https://taskviewapp.com/legal/terms">Terms and Conditions</a> &nbsp;•&nbsp;
   <a href="mailto:support@taskviewapp.com">Contact</a>
 </p>
