@@ -1,151 +1,116 @@
-# Privacy Policy
+<p align="center">
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_logo_cropped.png" width="180" alt="Task View Logo"/>
+</p>
 
-**Task View — Personal Organizer**
-*Task View App LLC*
+# Task View
 
-**Effective Date:** May 2026
-**Version:** 1.1
+### A to-do list that never lets anything fall through the cracks.
 
----
+Task View is an iOS and Android daily planning app built for people whose brains resist systems. It captures everything, ranks what matters, resurfaces what was missed, and keeps a permanent searchable record of everything you've ever put into it — without ever feeling like a calendar, a project manager, or a behavior modification system.
 
-## 1. Introduction
-
-Task View App LLC ("we," "us," or "our") operates the Task View personal organizer application ("the App"). This Privacy Policy explains how we handle information in connection with your use of the App.
-
-**The short version:** Task View is designed with privacy at its core. Your data is stored on your device. We do not collect, store, or have access to your personal task data. We do not sell your data. We do not use your data for advertising.
+Local-first. Private. Zero ads. No gamification. No dopamine loops. Built with the explicit philosophy that your attention deficit is not a product feature to be monetized.
 
 ---
 
-## 2. Information We Do Not Collect
+## Download
 
-Task View App LLC does not collect, store, or have access to:
+<p align="center">
+  <a href="#">
+    <img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" height="48" alt="Download on the App Store"/>
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="#">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" height="48" alt="Get it on Google Play"/>
+  </a>
+</p>
 
-- Your task lists, to-do items, or notes
-- Your Brain Dump entries
-- Your weekly or daily planning data
-- Your search history within the App
-- Your location
-- Your contacts
-- Your device identifiers beyond what Apple and Google provide to all developers through their platforms
-
-### Regulated and Protected Data
-
-Task View is not designed, audited, or certified for use with regulated or protected data categories. **We do not knowingly process, and you may not use the App to store or manage:**
-
-- Protected health information (PHI) as defined under HIPAA
-- Financial account numbers, payment card information, or banking credentials
-- Social Security numbers or government-issued identification numbers
-- Any data subject to PCI-DSS, GLBA, SOX, FERPA, or similar regulatory frameworks
-- Any other category of data subject to specific legal protection or professional confidentiality obligations
-
-Users are solely responsible for ensuring that any content entered into the App complies with applicable laws and regulations. Task View App LLC expressly disclaims all liability arising from the use of the App with regulated or protected data. For regulatory compliance requirements, please use purpose-built, certified software.
+> App Store and Google Play listings coming soon.
 
 ---
 
-## 3. Information Stored on Your Device
+## Why Task View
 
-All data you create in the App — including tasks, notes, priorities, Brain Dump entries, and settings — is stored locally on your device using SQLite, a local database. This data never leaves your device except as described in Section 4 (Cloud Backup) and Section 6 (Third-Party Services).
+Most productivity apps are built for people who love systems. Task View is built for everyone else. It gives you just enough structure to capture your day, see your week, and never lose track of anything — without the cognitive overhead of learning a complex tool.
 
-The following settings are stored locally on your device:
-
-- Display name (first name used for personalized greetings)
-- Week start day preference
-- Date format preference
-- Terms agreement record (timestamp and version)
-- Lock screen widget preference
-
----
-
-## 4. Cloud Backup
-
-The App offers an optional cloud backup feature. If you enable cloud backup:
-
-- **Apple users:** Your data is backed up to your personal Apple iCloud account using Apple's CloudKit framework. The backup is stored in your iCloud account, which is controlled by you and governed by Apple's Privacy Policy.
-- **Google users:** Your data is backed up to a private app folder in your personal Google Drive account. This folder is not visible in your regular Google Drive interface. It is stored in your Google account, which is controlled by you and governed by Google's Privacy Policy.
-
-Task View App LLC does not have access to your iCloud or Google Drive data. We do not store copies of your backup on our servers. We have no servers that receive or process your personal data.
-
-Cloud backup is optional. If you do not enable it, your data remains only on your device.
+- **Nothing falls through the cracks** — missed tasks resurface automatically in your Inbox
+- **Permanent searchable record** — everything you've ever captured is always retrievable
+- **Past days are locked** — your history is preserved exactly as it was
+- **No required setup** — open the app and start planning immediately
+- **Your data stays on your device** — Task View never transmits anything to any server
+- **No gamification** — no Karma scores, no streaks, no reward loops
 
 ---
 
-## 5. Authentication
+## Screens
 
-If you use Sign in with Apple or Sign in with Google to enable cloud backup, we receive a unique identifier from Apple or Google that allows us to associate your backup with your account. We do not receive or store your Apple ID email address or Google account email address on our servers. This identifier is stored locally on your device only.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_day_screen_card.svg" width="320" alt="Day Screen"/>
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_week_screen_card.svg" width="320" alt="Week Screen"/>
+</p>
 
----
+<p align="center">
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_brain_dump_card.svg" width="320" alt="Brain Dump"/>
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_search_card.svg" width="320" alt="Search"/>
+</p>
 
-## 6. Third-Party Services
+<p align="center">
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_inbox_card.svg" width="320" alt="Inbox"/>
+  &nbsp;
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_settings_card.svg" width="320" alt="Settings"/>
+</p>
 
-The App uses the following third-party services that may collect limited information as part of their operation:
-
-### 6.1 Apple App Store / Google Play Store
-Your subscription is managed through the Apple App Store or Google Play Store. Payment information is handled entirely by Apple or Google. Task View App LLC does not receive or store your payment information. Apple and Google's privacy policies govern their collection and use of your information.
-
-### 6.2 RevenueCat
-The App uses RevenueCat to manage subscription status and validate purchases. RevenueCat may collect limited technical information to verify subscription status, such as a device identifier and subscription state. RevenueCat does not receive your personal task data. RevenueCat's privacy policy is available at https://www.revenuecat.com/privacy
-
-### 6.3 Sentry
-The App uses Sentry for crash reporting and error monitoring. If the App crashes or encounters an error, Sentry may collect limited technical information including device type, operating system version, app version, and a stack trace describing the error. Sentry does not receive your personal task data, notes, or any content you enter into the App. Sentry's privacy policy is available at https://sentry.io/privacy/
-
-### 6.4 Apple and Google Platform Services
-As with all apps distributed through the App Store and Google Play, Apple and Google may collect certain technical and usage information through their platforms in accordance with their respective privacy policies.
-
----
-
-## 7. Children's Privacy
-
-The App is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has used the App in a way that has provided personal information, please contact us at taskview.app.admin@gmail.com and we will take appropriate action.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_recurring_card.svg" width="320" alt="Recurring Tasks"/>
+</p>
 
 ---
 
-## 8. Data Security
+## Features
 
-Because your data is stored on your device and in your own cloud accounts, its security is primarily governed by the security of your device and your Apple or Google account. We encourage you to use a strong device passcode and to keep your device's operating system up to date.
+**Day Screen**
+Plan your day with Top Priorities and a To Do list in a single clean card. Tap to edit inline, swipe to delete, and long press to set recurring tasks. Notes support auto-linked URLs, phone numbers, and email addresses. Past days are permanently locked read-only.
 
-Task View App LLC does not maintain servers that store your personal data and therefore cannot be responsible for server-side data breaches involving your task data.
+**Week Screen**
+See your entire week at a glance. Each day gets its own card. Past days are hidden so you only see what's actionable. Week-level notes are independent from daily notes.
 
-The App stores your data in a locally encrypted database on your device. The encryption key is stored in your device's secure keychain (iOS Keychain on Apple devices, Android Keystore on Android devices) and is never transmitted off your device.
+**Brain Dump**
+A permanent capture space for everything your brain needs to offload. Each entry is timestamped and searchable forever. Nothing you put here ever disappears. Use it for thoughts, ideas, reference lists, or anything that doesn't belong on today's task list — it's all retrievable the moment you need it.
 
----
+**Search**
+Live full-text search across every screen — tasks, notes, and Brain Dump entries. Tap any result to see the full context. Your entire history is always one search away.
 
-## 9. Data Retention and Deletion
+**Inbox**
+Uncompleted tasks from previous days surface here automatically. Mark them done, move them to today, or schedule them for a future date — without losing the original record. Nothing is silently dropped.
 
-Your data is retained on your device until you delete it or uninstall the App. The App provides a Delete All Data option in Settings that permanently removes all data from your device. If you have cloud backup enabled, you may delete your backup data through your iCloud or Google Drive settings.
+**Recurring Tasks**
+Set any task to repeat daily, weekly, monthly, or on custom days. Choose your own duration with a native scroll wheel picker. Manage, extend, or stop recurrences at any time.
 
-We do not retain copies of your data after you delete it from your device and cloud accounts.
-
----
-
-## 10. Your Rights
-
-Depending on your location, you may have certain rights regarding your personal data, including the right to access, correct, or delete your data. Because Task View App LLC does not store your personal task data, you exercise these rights directly through your device settings and your Apple or Google account settings.
-
-For questions about data processed by third-party services used by the App, please refer to their respective privacy policies.
-
----
-
-## 11. Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time. We will notify you of material changes by updating the Effective Date at the top of this document and, where appropriate, by providing notice within the App. Your continued use of the App after any changes constitutes acceptance of the updated Privacy Policy.
+**Settings**
+Personalize your greeting, week start day, and date format. Export all your data at any time. Built-in feature request form sends feedback directly to the team.
 
 ---
 
-## 12. California Privacy Rights
+## Privacy
 
-If you are a California resident, you may have additional rights under the California Consumer Privacy Act (CCPA). Because Task View App LLC does not sell personal information and does not collect personal task data on its servers, many CCPA provisions may not apply. For questions, please contact us at the address below.
+Task View is built on a simple principle: your data belongs to you. Your tasks, notes, and planning history never leave your device. Task View has no server, no account, no sync, and no analytics. There is nothing to breach because there is nothing stored anywhere but your device.
 
----
-
-## 13. Contact Us
-
-If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us at:
-
-**Task View App LLC**
-Email: taskview.app.admin@gmail.com
-Website: https://taskviewapp.github.io
-Legal: https://taskviewapp.github.io/legal/terms
+- [Privacy Policy](https://taskviewapp.github.io/legal/privacy)
+- [Terms and Conditions](https://taskviewapp.github.io/legal/terms)
 
 ---
 
-*© 2026 Task View App LLC. All rights reserved.*
+## Legal
+
+© 2026 Task View LLC. All rights reserved.  
+Task View LLC is a Wisconsin limited liability company.  
+Task View is a trademark of Task View LLC.
+
+---
+
+<p align="center">
+  <a href="https://taskviewapp.github.io/legal/privacy">Privacy Policy</a> &nbsp;•&nbsp;
+  <a href="https://taskviewapp.github.io/legal/terms">Terms and Conditions</a> &nbsp;•&nbsp;
+  <a href="mailto:support@taskviewapp.com">Contact</a>
+</p>
