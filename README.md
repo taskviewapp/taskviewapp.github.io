@@ -6,7 +6,7 @@
 
 ### A to-do list that never lets anything fall through the cracks.
 
-Task View is an iOS and Android daily planning app built for people whose brains resist systems. It captures everything, ranks what matters, resurfaces what was missed, and keeps a permanent searchable record of everything you've ever put into it — without ever feeling like a calendar, a project manager, or a behavior modification system.
+Task View is an iOS and Android daily planning app built for people whose brains resist systems. It captures everything, helps you focus on what matters most, resurfaces what was missed, and keeps a permanent searchable record of everything you've ever put into it — without ever feeling like a calendar, a project manager, or a behavior modification system.
 
 Local-first. Private. Zero ads. No gamification. No dopamine loops. Built with the explicit philosophy that your attention deficit is not a product feature to be monetized.
 
