@@ -3,332 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Task View — A to-do list that never lets anything fall through the cracks.</title>
-  <meta name="description" content="Task View is a personal daily planning app built for people whose brains resist systems. Local-first, private, zero ads, no gamification. Built for ADHD.">
   <meta name="theme-color" content="#0f0b2e">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <meta name="description" content="Task View is a personal daily planning app built for people whose brains resist systems. Local-first, private, zero ads, no gamification. Built for ADHD.">
+  <title>Task View &mdash; A to-do list that never lets anything fall through the cracks.</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f7f5ff; color: #1a1035; }
-
-    .hero {
-      background: #0f0b2e;
-      padding: 72px 32px 100px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-    .glow-orb {
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(60px);
-      opacity: 0.35;
-      pointer-events: none;
-    }
-    .glow-orb.coral { width: 320px; height: 320px; background: #ff6b3d; top: -60px; left: 15%; }
-    .glow-orb.amber { width: 280px; height: 280px; background: #f5a623; top: -40px; right: 10%; }
-    .glow-orb.purple { width: 360px; height: 360px; background: #7c3aed; bottom: -80px; left: 35%; }
-    .hero::after {
-      content: '';
-      position: absolute;
-      bottom: -44px; left: 0; right: 0;
-      height: 88px;
-      background: #f7f5ff;
-      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-    }
-    .hero-inner { position: relative; z-index: 1; }
-
-    .logo-glow {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 32px;
-      position: relative;
-    }
-    .logo-glow::before {
-      content: '';
-      position: absolute;
-      width: 220px; height: 220px;
-      border-radius: 48px;
-      background: #ff6b3d;
-      filter: blur(40px);
-      opacity: 0.5;
-      z-index: 0;
-    }
-    .logo-box {
-      position: relative;
-      z-index: 1;
-      width: 160px; height: 160px;
-      border-radius: 32px;
-      background: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid rgba(255,255,255,0.2);
-      overflow: hidden;
-    }
-    .logo-box img {
-      width: 160px;
-      height: 160px;
-      border-radius: 32px;
-      display: block;
-    }
-    .logo-box .logo-fallback {
-      font-size: 34px;
-      font-weight: 800;
-      color: #ff6b3d;
-    }
-
-    .hero-eyebrow {
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #f5a623;
-      margin-bottom: 16px;
-    }
-    .hero h1 {
-      font-size: 34px;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1.2;
-      margin-bottom: 22px;
-      max-width: 560px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .hero h1 span {
-      background: linear-gradient(90deg, #ff6b3d, #f5a623);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .hero .tagline {
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       font-size: 16px;
-      color: rgba(255,255,255,0.72);
-      line-height: 1.8;
-      max-width: 520px;
-      margin: 0 auto 40px;
+      line-height: 1.7;
+      color: #1a1a2e;
+      background: #fff;
     }
-    .badges {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-bottom: 12px;
+    a { color: #0f0b2e; }
+    .container { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
+    .logo { display: block; width: 100px; height: 100px; object-fit: contain; margin: 0 auto 1.5rem; border-radius: 22px; }
+    .app-label { text-align: center; font-size: 13px; font-weight: 500; color: #888; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.75rem; }
+    h1 { font-size: clamp(1.6rem, 4vw, 2.25rem); font-weight: 700; text-align: center; margin: 0 0 1.5rem; line-height: 1.25; }
+    .tagline { font-size: 1.05rem; text-align: center; color: #444; margin-bottom: 2rem; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; justify-content: center; margin-bottom: 0.75rem; }
+    .cta-btn {
+      display: inline-block; padding: 0.65rem 1.4rem;
+      background: #0f0b2e; color: #fff; text-decoration: none;
+      border-radius: 8px; font-size: 15px; font-weight: 500;
     }
-    .badge-btn {
-      background: rgba(255,255,255,0.1);
-      border: 1px solid rgba(255,255,255,0.2);
-      border-radius: 12px;
-      padding: 12px 24px;
-      color: #fff;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      text-decoration: none;
-    }
-    .badge-btn:hover { background: rgba(255,255,255,0.2); }
-    .badge-btn.primary {
-      background: linear-gradient(135deg, #ff6b3d, #f5a623);
-      border: none;
-    }
-    .badge-btn.primary:hover { opacity: 0.9; }
-    .coming-soon { font-size: 13px; color: rgba(255,255,255,0.38); margin-top: 10px; }
-
-    .pills {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 52px 24px 16px;
-    }
+    .cta-btn:hover { background: #1a1650; }
+    .coming-soon { text-align: center; font-size: 13px; color: #999; margin-bottom: 2.5rem; }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 3rem; }
     .pill {
-      background: #fff;
-      border: 1px solid #ddd6fe;
-      border-radius: 24px;
-      padding: 6px 16px;
-      font-size: 13px;
-      color: #7c3aed;
-      font-weight: 500;
+      font-size: 13px; font-weight: 500; padding: 0.3rem 0.85rem;
+      border: 1px solid #d0d0e0; border-radius: 20px; color: #444;
     }
-
-    .content {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 16px 24px 80px;
+    .section-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #999; margin-bottom: 1rem; }
+    h2 { font-size: 1.35rem; font-weight: 700; margin: 0 0 0.5rem; }
+    h3 { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 0.35rem; }
+    p { margin: 0 0 1rem; }
+    ul { margin: 0 0 1rem; padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    .screenshot-row {
+      display: flex; gap: 0.75rem; overflow-x: auto;
+      padding-bottom: 0.5rem; margin-bottom: 2.5rem;
+      scrollbar-width: none;
     }
-    .section { margin-bottom: 52px; }
-    .section-title {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #ff6b3d;
-      margin-bottom: 20px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #e8e0ff;
-    }
-
-    .why-list { list-style: none; margin: 0 0 14px; }
-    .why-list li {
-      font-size: 15px;
-      line-height: 1.75;
-      color: #1a1035;
-      margin-bottom: 10px;
-      padding-left: 28px;
-      position: relative;
-    }
-    .why-list li::before {
-      content: '';
-      position: absolute;
-      left: 0; top: 9px;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #ff6b3d, #f5a623);
-    }
-    .prose p {
-      font-size: 15px;
-      line-height: 1.75;
-      color: #1a1035;
-      margin-bottom: 14px;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 14px;
-    }
-    .feature-card {
-      background: #fff;
-      border: 1px solid #e8e0ff;
-      border-radius: 12px;
-      padding: 20px 16px;
-      position: relative;
-      overflow: hidden;
-    }
-    .feature-card::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #ff6b3d, #f5a623);
-    }
-    .feature-card .icon {
-      font-size: 24px;
-      margin-bottom: 10px;
-      color: #ff6b3d;
-    }
-    .feature-card h3 {
-      font-size: 14px;
-      font-weight: 600;
-      color: #1a1035;
-      margin-bottom: 6px;
-    }
-    .feature-card p {
-      font-size: 13px;
-      color: #6b6080;
-      line-height: 1.55;
-    }
-
-    .screens-section {
-      text-align: center;
-      margin-bottom: 52px;
-    }
-    .screens-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-    .screens-grid img {
-      width: 200px;
-      border-radius: 12px;
-      border: 1px solid #e8e0ff;
-    }
-
+    .screenshot-row::-webkit-scrollbar { display: none; }
+    .screenshot-row img { height: 200px; width: auto; border-radius: 12px; border: 1px solid #e8e8f0; flex-shrink: 0; }
+    .divider { border: none; border-top: 1px solid #eee; margin: 2.5rem 0; }
     .privacy-box {
-      background: #fff;
-      border: 1px solid #e8e0ff;
-      border-left: 4px solid #7c3aed;
-      border-radius: 0 12px 12px 0;
-      padding: 24px 28px;
-    }
-    .privacy-box p {
+      background: #f5f5fa;
+      border-left: 4px solid #0f0b2e;
+      border-radius: 4px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
       font-size: 15px;
-      line-height: 1.7;
-      color: #1a1035;
-      margin-bottom: 10px;
     }
-    .privacy-box p:last-child { margin-bottom: 0; }
-    .privacy-box a { color: #7c3aed; text-decoration: none; }
-    .privacy-box a:hover { text-decoration: underline; }
-
     footer {
-      background: #0f0b2e;
-      padding: 40px 24px;
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #888;
       text-align: center;
     }
-    footer p {
-      font-size: 13px;
-      color: rgba(255,255,255,0.45);
-      margin-bottom: 16px;
-      line-height: 1.7;
-    }
-    footer a {
-      color: rgba(255,255,255,0.6);
-      text-decoration: none;
-      margin: 0 12px;
-      font-size: 13px;
-    }
-    footer a:hover { color: #fff; }
-
-    @media (max-width: 600px) {
-      .hero h1 { font-size: 26px; }
-      .hero .tagline { font-size: 14px; }
-      .badge-btn { font-size: 13px; padding: 10px 18px; }
-    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.75rem; justify-content: center; }
+    .footer-links a { color: #555; text-decoration: none; font-size: 13px; }
+    .footer-links a:hover { color: #0f0b2e; text-decoration: underline; }
   </style>
 </head>
 <body>
+<div class="container">
 
-  <div class="hero">
-    <div class="glow-orb coral"></div>
-    <div class="glow-orb amber"></div>
-    <div class="glow-orb purple"></div>
-    <div class="hero-inner">
+  <img class="logo" src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/task_view_logo_cropped.png" alt="Task View Logo">
 
-      <div class="logo-glow">
-        <div class="logo-box">
-          <img src="/task_view_logo_cropped.png" alt="Task View Logo">
-        </div>
-      </div>
+  <p class="app-label">Task View &mdash; Personal Organizer</p>
 
-      <p class="hero-eyebrow">Task View &mdash; Personal Organizer</p>
-      <h1>A to-do list that <span>never lets anything fall through the cracks.</span></h1>
-      <p class="tagline">
-        It captures everything, helps you focus on what matters most, resurfaces what was missed, and keeps a permanent searchable record of everything you&rsquo;ve ever put into it &mdash; without ever feeling like a calendar, a project manager, or a behavior modification system.
-      </p>
+  <h1>A to-do list that never lets anything fall through the cracks.</h1>
 
-      <div class="badges">
-        <a href="#" class="badge-btn primary">
-          <i class="ti ti-brand-apple" style="font-size:20px" aria-hidden="true"></i>
-          Download on the App Store
-        </a>
-        <a href="#" class="badge-btn">
-          <i class="ti ti-brand-google-play" style="font-size:20px" aria-hidden="true"></i>
-          Get it on Google Play
-        </a>
-      </div>
-      <p class="coming-soon">App Store and Google Play listings coming soon.</p>
+  <p class="tagline">It captures everything, ranks what matters, resurfaces what was missed, and keeps a permanent searchable record of everything you&rsquo;ve ever put into it &mdash; without ever feeling like a calendar, a project manager, or a behavior modification system.</p>
 
-    </div>
+  <div class="cta-row">
+    <a class="cta-btn" href="#">Download on the App Store</a>
+    <a class="cta-btn" href="#">Get it on Google Play</a>
   </div>
+  <p class="coming-soon">App Store and Google Play listings coming soon.</p>
 
-  <div class="pills">
+  <div class="pill-row">
     <span class="pill">Local-first</span>
     <span class="pill">Private</span>
     <span class="pill">Zero ads</span>
@@ -336,111 +96,81 @@
     <span class="pill">Built for ADHD</span>
   </div>
 
-  <div class="content">
+  <hr class="divider">
 
-    <div class="section">
-      <p class="section-title">Why Task View</p>
-      <div class="prose">
-        <p>Most productivity apps are built for people who love systems. Task View is built for everyone else. It gives you just enough structure to capture your day, see your week, and never lose track of anything &mdash; without the cognitive overhead of learning a complex tool.</p>
-      </div>
-      <ul class="why-list">
-        <li><strong>Nothing falls through the cracks</strong> &mdash; missed tasks resurface automatically in your Inbox</li>
-        <li><strong>Permanent searchable record</strong> &mdash; everything you&rsquo;ve ever captured is always retrievable</li>
-        <li><strong>Past days are locked</strong> &mdash; your history is preserved exactly as it was</li>
-        <li><strong>Your data stays on your device</strong> &mdash; Task View never transmits anything to any server</li>
-        <li><strong>No required setup</strong> &mdash; open the app and start planning immediately</li>
-        <li><strong>No gamification</strong> &mdash; no Karma scores, no streaks, no reward loops</li>
-      </ul>
-    </div>
+  <p class="section-label">Why Task View</p>
+  <p>Most productivity apps are built for people who love systems. Task View is built for everyone else. It gives you just enough structure to capture your day, see your week, and never lose track of anything &mdash; without the cognitive overhead of learning a complex tool.</p>
+  <ul>
+    <li><strong>Nothing falls through the cracks</strong> &mdash; missed tasks resurface automatically in your Inbox</li>
+    <li><strong>Permanent searchable record</strong> &mdash; everything you&rsquo;ve ever captured is always retrievable</li>
+    <li><strong>Past days are locked</strong> &mdash; your history is preserved exactly as it was</li>
+    <li><strong>Your data stays on your device</strong> &mdash; Task View never transmits anything to any server</li>
+    <li><strong>No required setup</strong> &mdash; open the app and start planning immediately</li>
+    <li><strong>No gamification</strong> &mdash; no Karma scores, no streaks, no reward loops</li>
+  </ul>
 
-    <div class="section screens-section">
-      <p class="section-title">Screens</p>
-      <div class="screens-grid">
-        <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_day_screen_card.svg" alt="Day Screen">
-        <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_week_screen_card.svg" alt="Week View">
-        <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_brain_dump_card.svg" alt="Brain Dump">
-        <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_search_card.svg" alt="Search">
-        <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_inbox_card.svg" alt="Inbox">
-        <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_recurring_card.svg" alt="Recurring Tasks">
-      </div>
-    </div>
+  <hr class="divider">
 
-    <div class="section">
-      <p class="section-title">Features</p>
-      <div class="feature-grid">
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-calendar-event" aria-hidden="true"></i></div>
-          <h3>Day Screen</h3>
-          <p>Top Priorities and To Do in one clean card. Tap to edit inline, swipe to delete, long press for recurring. Past days locked read-only.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-calendar-week" aria-hidden="true"></i></div>
-          <h3>Week View</h3>
-          <p>See your entire week at a glance. Each day gets its own card. Only actionable days shown.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-brain" aria-hidden="true"></i></div>
-          <h3>Brain Dump</h3>
-          <p>Permanent capture space for everything your brain needs to offload. Timestamped and searchable forever. Nothing you put here ever disappears.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-search" aria-hidden="true"></i></div>
-          <h3>Search</h3>
-          <p>Live full-text search across every screen &mdash; tasks, notes, and Brain Dump entries. Your entire history is always one search away.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-inbox" aria-hidden="true"></i></div>
-          <h3>Inbox</h3>
-          <p>Uncompleted tasks resurface automatically. Mark done, move to today, or schedule for a future date. Nothing is silently dropped.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-repeat" aria-hidden="true"></i></div>
-          <h3>Recurring Tasks</h3>
-          <p>Daily, weekly, monthly, or custom days. Choose your own duration. Manage, extend, or stop recurrences at any time.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-lock" aria-hidden="true"></i></div>
-          <h3>Biometric Lock</h3>
-          <p>Protect your data with Face ID or Touch ID. Your planning history stays private.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-download" aria-hidden="true"></i></div>
-          <h3>Data Export</h3>
-          <p>Export your complete data at any time as CSV files. Your data is always yours to keep.</p>
-        </div>
-        <div class="feature-card">
-          <div class="icon"><i class="ti ti-palette" aria-hidden="true"></i></div>
-          <h3>9 Themes</h3>
-          <p>Classic, Dark, Mint, and more. Find the visual environment that helps you focus.</p>
-        </div>
-      </div>
-    </div>
+  <p class="section-label">Screens</p>
+  <div class="screenshot-row">
+    <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_day_screen_card.svg" alt="Day Screen">
+    <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_week_screen_card.svg" alt="Week View">
+    <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_brain_dump_card.svg" alt="Brain Dump">
+    <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_search_card.svg" alt="Search">
+    <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_inbox_card.svg" alt="Inbox">
+    <img src="https://raw.githubusercontent.com/taskviewapp/taskviewapp.github.io/main/screenshots/taskview_recurring_card.svg" alt="Recurring Tasks">
+  </div>
 
-    <div class="section">
-      <p class="section-title">Privacy</p>
-      <div class="privacy-box">
-        <p>Task View is built on a simple principle: your data belongs to you. Your tasks, notes, and planning history never leave your device. Task View has no server, no account, no sync, and no analytics. There is nothing to breach because there is nothing stored anywhere but your device.</p>
-        <p>
-          <a href="/legal/privacy.html">Privacy Policy</a> &nbsp;&bull;&nbsp;
-          <a href="/legal/terms.html">Terms and Conditions</a>
-        </p>
-      </div>
-    </div>
+  <hr class="divider">
 
+  <p class="section-label">Features</p>
+
+  <h3>Day Screen</h3>
+  <p>Top Priorities and To Do in one clean card. Tap to edit inline, swipe to delete, long press for recurring. Past days locked read-only.</p>
+
+  <h3>Week View</h3>
+  <p>See your entire week at a glance. Each day gets its own card. Only actionable days shown.</p>
+
+  <h3>Brain Dump</h3>
+  <p>Permanent capture space for everything your brain needs to offload. Timestamped and searchable forever. Nothing you put here ever disappears.</p>
+
+  <h3>Search</h3>
+  <p>Live full-text search across every screen &mdash; tasks, notes, and Brain Dump entries. Your entire history is always one search away.</p>
+
+  <h3>Inbox</h3>
+  <p>Uncompleted tasks resurface automatically. Mark done, move to today, or schedule for a future date. Nothing is silently dropped.</p>
+
+  <h3>Recurring Tasks</h3>
+  <p>Daily, weekly, monthly, or custom days. Choose your own duration. Manage, extend, or stop recurrences at any time.</p>
+
+  <h3>Biometric Lock</h3>
+  <p>Protect your data with Face ID or Touch ID. Your planning history stays private.</p>
+
+  <h3>Data Export</h3>
+  <p>Export your complete data at any time as CSV files. Your data is always yours to keep.</p>
+
+  <h3>9 Themes</h3>
+  <p>Classic, Dark, Mint, and more. Find the visual environment that helps you focus.</p>
+
+  <hr class="divider">
+
+  <p class="section-label">Privacy</p>
+  <div class="privacy-box">
+    Task View is built on a simple principle: your data belongs to you. Your tasks, notes, and planning history never leave your device. Task View has no server, no account, no sync, and no analytics. There is nothing to breach because there is nothing stored anywhere but your device.
   </div>
 
   <footer>
-    <p>
-      &copy; 2026 Task View LLC. All rights reserved.<br>
-      Task View LLC is a Wisconsin limited liability company.<br>
-      Task View is a trademark of Task View LLC.
-    </p>
-    <div>
-      <a href="/legal/privacy.html">Privacy Policy</a>
-      <a href="/legal/terms.html">Terms and Conditions</a>
+    <div class="footer-links">
+      <a href="https://taskviewapp.com/legal/privacy.html">Privacy Policy</a>
+      <a href="https://taskviewapp.com/legal/terms.html">Terms and Conditions</a>
+      <a href="https://taskviewapp.com/legal/refund.html">Refund Policy</a>
       <a href="mailto:support@taskviewapp.com">Contact</a>
     </div>
+    <div>&copy; 2026 Task View LLC. All rights reserved.<br>
+    Task View LLC is a Wisconsin limited liability company.<br>
+    Task View is a trademark of Task View LLC.</div>
   </footer>
 
+</div>
 </body>
 </html>
