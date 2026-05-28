@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0b2e">
+  <title>Refund Policy — Task View</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 2rem 1.25rem 4rem;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      color: #1a1a2e;
+      background: #fff;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    a { color: #0f0b2e; }
+    .back-link { display: inline-block; margin-bottom: 1.5rem; font-size: 14px; text-decoration: none; color: #555; }
+    .back-link:hover { color: #0f0b2e; }
+    .logo { display: block; width: 80px; height: 80px; object-fit: contain; margin-bottom: 1.5rem; border-radius: 18px; }
+    h1 { font-size: 2rem; font-weight: 700; margin: 0 0 0.25rem; }
+    .meta { font-size: 14px; color: #666; margin-bottom: 2rem; }
+    .summary-box {
+      background: #f5f5fa;
+      border-left: 4px solid #0f0b2e;
+      border-radius: 4px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 2rem;
+      font-size: 15px;
+    }
+    .summary-box strong { font-weight: 600; }
+    h2 { font-size: 1.15rem; font-weight: 600; margin: 2rem 0 0.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.4rem; }
+    p { margin: 0 0 1rem; }
+    ul { margin: 0 0 1rem; padding-left: 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    .platform-block {
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 1rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .platform-block h3 { font-size: 1rem; font-weight: 600; margin: 0 0 0.5rem; }
+    .platform-block a { font-weight: 500; }
+    .step-list { list-style: none; padding: 0; counter-reset: steps; }
+    .step-list li { counter-increment: steps; padding-left: 2rem; position: relative; margin-bottom: 0.5rem; }
+    .step-list li::before { content: counter(steps); position: absolute; left: 0; top: 0; background: #0f0b2e; color: #fff; font-size: 12px; font-weight: 600; width: 20px; height: 20px; border-radius: 50%; display: flex; align-items: center; justify-content: center; line-height: 1; }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid #eee;
+      font-size: 13px;
+      color: #888;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.75rem; }
+    .footer-links a { color: #555; text-decoration: none; font-size: 13px; }
+    .footer-links a:hover { color: #0f0b2e; text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <a class="back-link" href="https://taskviewapp.com/">← Back to Task View</a>
+
+  <img class="logo" src="https://taskviewapp.com/task_view_logo_cropped.png" alt="Task View Logo">
+
+  <h1>Refund Policy</h1>
+  <p class="meta">Task View LLC &nbsp;•&nbsp; Effective May 2026 &nbsp;•&nbsp; Version 1.0</p>
+
+  <div class="summary-box">
+    <strong>The short version:</strong> Task View subscriptions are billed through Apple or Google. Refunds are processed by Apple or Google directly — not by Task View LLC. We cannot issue refunds ourselves. If you have a billing issue, the links below will take you directly to the right place.
+  </div>
+
+  <h2>1. How Billing Works</h2>
+  <p>Task View is a subscription app distributed through the Apple App Store and Google Play Store. All billing, payment processing, and subscription management is handled entirely by Apple or Google. Task View LLC does not process payments, store payment information, or have access to your billing details.</p>
+  <p>Because Apple and Google handle all transactions, all refund requests must go through them directly. Task View LLC cannot issue refunds, credits, or billing adjustments.</p>
+
+  <h2>2. Free Trial</h2>
+  <p>Task View offers a free trial period. No payment is charged during the trial. The trial period begins on the date of first installation. If you uninstall the app before the trial ends, no charge is made. The exact trial duration is displayed in the App Store or Google Play listing at the time of download.</p>
+
+  <h2>3. Subscription Cancellation</h2>
+  <p>You may cancel your subscription at any time. Cancellation takes effect at the end of the current billing period — you retain access to the app until the period ends. Cancelling does not automatically trigger a refund for the current period.</p>
+
+  <div class="platform-block">
+    <h3>Cancel on iPhone or iPad (iOS)</h3>
+    <ol class="step-list">
+      <li>Open <strong>Settings</strong> on your device</li>
+      <li>Tap your name at the top, then tap <strong>Subscriptions</strong></li>
+      <li>Tap <strong>Task View</strong></li>
+      <li>Tap <strong>Cancel Subscription</strong></li>
+    </ol>
+  </div>
+
+  <div class="platform-block">
+    <h3>Cancel on Android (Google Play)</h3>
+    <ol class="step-list">
+      <li>Open the <strong>Google Play Store</strong> app</li>
+      <li>Tap your profile icon, then tap <strong>Payments &amp; subscriptions</strong></li>
+      <li>Tap <strong>Subscriptions</strong>, then tap <strong>Task View</strong></li>
+      <li>Tap <strong>Cancel subscription</strong></li>
+    </ol>
+  </div>
+
+  <h2>4. Requesting a Refund</h2>
+  <p>If you believe you were charged in error, were charged after cancelling, or have a billing dispute, contact Apple or Google directly using the links below. Apple and Google have their own refund policies and review requests on a case-by-case basis.</p>
+
+  <div class="platform-block">
+    <h3>Apple — Request a Refund</h3>
+    <p>Use Apple's official refund request tool:</p>
+    <p><a href="https://reportaproblem.apple.com" target="_blank" rel="noopener">reportaproblem.apple.com</a></p>
+    <p>Sign in with the Apple ID used to purchase the subscription, find the Task View charge, and select <strong>Request a Refund</strong>.</p>
+  </div>
+
+  <div class="platform-block">
+    <h3>Google Play — Request a Refund</h3>
+    <p>Use Google's subscription support page:</p>
+    <p><a href="https://support.google.com/googleplay/answer/2479637" target="_blank" rel="noopener">support.google.com/googleplay/answer/2479637</a></p>
+    <p>Sign in with the Google account used to purchase the subscription and follow the instructions for subscription refunds.</p>
+  </div>
+
+  <h2>5. What Task View LLC Can Help With</h2>
+  <p>While we cannot process refunds, we are happy to help with:</p>
+  <ul>
+    <li>Questions about what the subscription includes</li>
+    <li>Help understanding a charge on your account</li>
+    <li>Directing you to the right Apple or Google support page</li>
+    <li>Any questions about how the app works</li>
+  </ul>
+  <p>Contact us at <a href="mailto:support@taskviewapp.com">support@taskviewapp.com</a></p>
+
+  <h2>6. Price Changes</h2>
+  <p>If subscription pricing changes, Apple and Google will notify you in advance before your next renewal. You will have the opportunity to cancel before the new price takes effect. Current pricing is always available in the App Store or Google Play listing.</p>
+
+  <h2>7. Contact</h2>
+  <p><strong>Task View LLC</strong><br>
+  Email: <a href="mailto:support@taskviewapp.com">support@taskviewapp.com</a><br>
+  Website: <a href="https://taskviewapp.com">taskviewapp.com</a></p>
+
+  <p style="font-size:14px; color:#666;">© 2026 Task View LLC. All rights reserved.<br>
+  Task View LLC is a Wisconsin limited liability company.<br>
+  Task View is a trademark of Task View LLC.</p>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://taskviewapp.com/legal/privacy.html">Privacy Policy</a>
+      <a href="https://taskviewapp.com/legal/terms.html">Terms and Conditions</a>
+      <a href="https://taskviewapp.com/legal/refund.html">Refund Policy</a>
+      <a href="mailto:support@taskviewapp.com">Contact</a>
+    </div>
+    <div>© 2026 Task View LLC</div>
+  </footer>
+
+</body>
+</html>
